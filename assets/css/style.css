@@ -26,7 +26,7 @@ html[data-theme="dark"] {
 }
 
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     html, html[data-theme="dark"] {
         --bg-main: #18181C;
         --bg-sub: #262626;
