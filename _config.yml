@@ -94,7 +94,10 @@ plugins:
 collections:
     notes:
       output: true
-      permalink: /notes/:title      
+      permalink: /notes/:title  
+    recipes:
+      output: true
+      permalink: /recipes/:title
 # Disqus Comments
 disqus:
     # Leave shortname blank to disable comments site-wide.
@@ -128,7 +131,12 @@ defaults:
     values:
       layout: Post
       content-type: notes
-
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: Post
+      content-type: recipes
 
 # Exclude from processing.
 # The following items will not be processed, by default.

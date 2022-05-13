@@ -14,12 +14,6 @@ services:
     networks:
       - jekyll
     volumes:
-      - ./_includes:/usr/src/app/_includes
-      - ./_layouts:/usr/src/app/_layouts
-      - ./_posts:/usr/src/app/_posts
-      - ./_notes:/usr/src/app/_notes
-      - ./assets:/usr/src/app/assets
-      - ./pages:/usr/src/app/pages
+      - ${PWD}:/usr/src/app
     ports:
       - "4000:4000"
-
