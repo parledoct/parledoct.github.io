@@ -41,15 +41,15 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
         rel="stylesheet">
     {%- if page.title -%}
+    <title>{{site.heading}}: {{ page.title }}</title>
     <meta content="{{ page.title }}" property="og:title">
     <meta content="article" property="og:type">
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
     {%- else -%}
+    <title>{{site.heading}}</title>
     <meta content="website" property="og:type">
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
     {%- endif -%}
-
-    <title>{{site.heading}}</title>
 
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
     <link rel="apple-touch-icon" href="/assets/img/profile.png">

@@ -25,62 +25,10 @@ To make sure that you can quickly get set up with the tools you need for a given
 - Linux:
     - Follow steps on: https://docs.docker.com/desktop/linux/install/#generic-installation-steps
 
-## Check environment
+### Verification
 
-- Once you have docker installed and running, download and unzip the [Parledoct tutorials](https://github.com/parledoct/tutorials/archive/refs/heads/main.zip) repository
+Once you have Docker installed and running, open a [command-line interface](https://tutorial.djangogirls.org/en/intro_to_command_line/) (e.g. macOS Terminal or Windows Command Prompt), and type in the command `docker run hello-world`:
 
-- In your Finder (macOS) or File Explorer (Windows), go to the folder where you unzipped the repository. The folder will be called `tutorials-main` and have a file called `docker-compose.yml`. Make note of the path to this folder, e.g.:
-    - macOS/Linux: `/users/nay/Downloads/tutorials-main`
-    - Windows: `C:\Users\nay\Downloads\tutorials-main\tutorials-main`
+<script id="asciicast-vY9XqvToi13S6iWjKBIOrDvix" src="https://asciinema.org/a/vY9XqvToi13S6iWjKBIOrDvix.js" async></script>
 
-- Launch the Terminal app (macOS) or Command Prompt (Windows) and then to **c**hange **d**irectory to the folder noted above type in:
-    ```bash
-    # macOS/Linux
-    cd /users/nay/Downloads/tutorials-main
-    
-    # Windows
-    cd C:\Users\nay\Downloads\tutorials-main\tutorials-main
-    ```
-- We can make sure `docker-compose.yml` is inside the folder we've just browsed to by typing:
-
-    ```bash
-    # macOS/Linux
-    ls
-
-    # Windows
-    dir
-    ```
-    
-- If Docker Desktop is installed and running, you should be able to type:
-
-    ```bash
-    docker-compose run hello
-    ```
-    
-    Which should output something like:
-    
-    ```
-    Creating network "tutorials_default" with the default driver
-    Creating tutorials_hello_run ... done
-
-    Hello from Docker!
-    This message shows that your installation appears to be working correctly.
-
-    To generate this message, Docker took the following steps:
-     1. The Docker client contacted the Docker daemon.
-     2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
-        (amd64)
-     3. The Docker daemon created a new container from that image which runs the
-        executable that produces the output you are currently reading.
-     4. The Docker daemon streamed that output to the Docker client, which sent it
-        to your terminal.
-
-    To try something more ambitious, you can run an Ubuntu container with:
-     $ docker run -it ubuntu bash
-
-    Share images, automate workflows, and more with a free Docker ID:
-     https://hub.docker.com/
-
-    For more examples and ideas, visit:
-     https://docs.docker.com/get-started/
-    ```
+If you get the expected output above then you're ready to start using Docker! Let's set up the environment we'll use for all the [Parledoct tutorials now](parledoct-tutorials-environment).
