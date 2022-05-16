@@ -4,13 +4,11 @@
             <div class="column is-6 is-offset-3">
                 <div class="block homeblock">
                     <p>
-                        Parledoct (like 'aqueduct') is a collection of tutorials and supporting tools to assist in the deployment of speech processing pipelines for language documentation projects.
+                        Parledoct (like 'aqueduct') is a collection of tutorials and supporting tools to assist in the deployment of speech processing pipelines for language documentation projects. These tutorials are aimed at those who have some basic familiarity with speech data (e.g. annotating in Praat/ELAN) and scripting (e.g. in Praat or R) and want to learn to directly use modern speech processing tools via the command-line interface, complementing projects such as <a href="https://github.com/CoEDL/elpis" target="_blank">Elpis</a> which provides a user-friendly interface for similar tools.
                     </p>
                     <p>
-                        These tutorials are aimed at those who have some basic familiarity with speech data (e.g. annotating in Praat/ELAN) and scripting (e.g. in Praat or R) and want to learn to directly use modern speech processing tools via the command-line interface, complementing projects such as <a href="https://github.com/CoEDL/elpis" target="_blank">Elpis</a>, which provides a user-friendly interface for similar tools.
-                    </p>
-                    <p>
-                        The tutorials fall into one of two main categories: concepts and recipes. The recipes will be kept relatively brief and contain links to relevant conceptual introductions (e.g. Audio resampling), which are relatively more expository (note: some of these pages may be external links). The tutorials also build on each other as shown in the roadmap below, so you can dive in wherever you feel most comfortable.
+                        The tutorials fall into one of two main categories: concepts and recipes. The recipes will be kept relatively brief and contain links to relevant conceptual introductions, which are more expository (note: currently, many of them are placeholders/external links).
+                        Earlier tutorials provide scaffolding for the later ones: for example, you first learn to perform a relatively simple operation over a set of files (loop through audio files in a folder and calculate the duration for each of them) after which a more complex operation is introduced (voice activity detection and exporting detected regions to an ELAN .eaf file).
                     </p>
                 </div>
             </div>
@@ -21,7 +19,7 @@
         <div class="columns">
             <div class="column is-full">
                 <div class="block homeblock">
-                    <svg id="mindmap" style="width:100%;height:400px"></svg>
+                    <svg id="mindmap" style="width:100%;height:550px"></svg>
                 </div>
             </div>
         </div>
@@ -39,18 +37,22 @@
 
 - Data basics
     - Working with audio data
+    - Data wrangling/tidying
 
 - Computation basics
     - Environment
         - [Command-line interface](https://tutorial.djangogirls.org/en/intro_to_command_line/)
         - Docker
+        - Using remote enviroments
     - Data structures
-        - Lists
+        - [Lists](https://www.learnbyexample.org/python-list/)
+        - [List comprehensions](https://www.learnbyexample.org/python-list-comprehension/)
     - Control structures
-        - For loop
+        - [For loop](https://www.learnbyexample.org/python-for-loop/)
+    - [Functions](https://www.learnbyexample.org/python-functions/)
 
 - Evaluation measures
-    - Frame Error Rate
+    - Frame Error Rate and F1
     - Word Error Rate/Character Error Rate
 
 ## Recipes
@@ -58,6 +60,7 @@
 - Setup
     - [Environment setup with Docker](notes/environment-setup-with-docker)
     - [Parledoct tutorials environment](notes/parledoct-tutorials-environment)
+    - Data transfer using scp
 - Calcuate total duration of audio files in folder
     - By hand in a spreadsheet
     - Using Python
@@ -66,6 +69,14 @@
     - [With default parameters](notes/vad-auditok-defaults)
     - Eyeballing good enough parameters
     - Searching for optimal parameters
+
+- Audio classification with SpeechBrain embeddings
+    - Speaker diarisation
+    - Language classification
+
+- Automatic speech recognition with wav2vec 2.0
+    - Transcription using a pre-trained model
+    - Fine-tuning a pre-trained model on the cloud
 </pre>
 
 <script>

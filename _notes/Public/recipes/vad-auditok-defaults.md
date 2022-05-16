@@ -96,3 +96,35 @@ If you browse in your Finder (macOS) or File Explorer (Windows) to the `data` fo
 <p style="text-align:center">
     <img src="https://user-images.githubusercontent.com/9938298/168444929-c459dd5c-0d1e-4281-aa66-1993aa9f3a34.png">
 </p>
+
+#### Detect and export for all files in folder
+
+Now we can combine this recipe with what we learned from the [audio duration calculation tutorial](#to-do) to perform voice activity detection and exporting the detected regions to an ELAN .eaf file for all wav files in a given directory:
+
+<pre>
+import glob
+import os 
+
+for wav_file in glob.glob("data/*.wav"):
+
+    speech_regions = auditok.split(wav_file)
+
+    annot_data = pympi.Elan.Eaf(file_path=None)
+    annot_data.add_linked_file(os.path.basename(wav_file))
+
+    for region in speech_regions:
+        # auditok stores the start and end times (in seconds)
+        # as the metadata of each detected region. Convert to
+        # milliseconds to be compatible with the time format
+        # the add_annotation function is expecting
+
+        start_ms = int(region.meta.start * 1000)
+        end_ms   = int(region.meta.end * 1000)
+
+        # Add a blank annotation (value='') on the 'default' tier
+        annot_data.add_annotation(id_tier='default', start=start_ms, end=end_ms, value='')
+
+    # 'data/20180518p.wav' -> 'data/20180518p.eaf'
+    eaf_name = wav_file.rsplit('.')[0] + '.eaf'
+    annot_data.to_file(eaf_name)
+</pre>
