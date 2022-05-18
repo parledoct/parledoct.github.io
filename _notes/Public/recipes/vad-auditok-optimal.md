@@ -30,10 +30,10 @@ docker-compose run --rm --service-ports vad
 
 ### Data
 
-Assuming you've [downloaded and unzipped](vad-auditok-defaults#data) the Ihanzu data into the `data` directory. We'll also need some human annotations to evaluate how good the predictions are. Let's download from Zenodo an ELAN file where I've completed the first minute of `20180518p.eaf` for you:
+Assuming you've [downloaded and unzipped](vad-auditok-defaults#data) the Ihanzu data into the `data` directory. We'll also need some human annotations to evaluate how good the predictions are. Let's download from Zenodo an ELAN file where I've completed the first minute of `20180518p.wav` for you:
 
 <pre>
-!wget 'https://zenodo.org/record/6519235/files/20180518p.eaf?download=1' -O 'data/20180518p.eaf'
+!wget 'https://zenodo.org/record/6519235/files/20180518p.eaf?download=1' -O 'data/20180518p_NS.eaf'
 </pre>
 
 You can see that I've annotated time intervals up to the first minute on the `default` tier:
@@ -49,7 +49,7 @@ We can use the `pympi` package to read in annotations from an ELAN eaf file. Sin
 <pre>
 import pympi
 
-human_data   = pympi.Elan.Eaf(file_path="data/20180518p.eaf")
+human_data   = pympi.Elan.Eaf(file_path="data/20180518p_NS.eaf")
 
 # Convert 60 seconds to 60,000 milliseconds, since that's the time format the function expects
 true_regions = human_data.get_annotation_data_between_times('default', 0, 60 * 1000)

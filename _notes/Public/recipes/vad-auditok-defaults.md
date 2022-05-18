@@ -102,8 +102,10 @@ If you browse in your Finder (macOS) or File Explorer (Windows) to the `data` fo
 Now we can combine this recipe with what we learned from the [audio duration calculation tutorial](#to-do) to perform voice activity detection and exporting the detected regions to an ELAN .eaf file for all wav files in a given directory:
 
 <pre>
+import auditok
 import glob
-import os 
+import os
+import pympi
 
 for wav_file in glob.glob("data/*.wav"):
 

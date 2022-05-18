@@ -74,8 +74,10 @@ Now let's suppose you've tried out a few different energy thresholds and decided
 These assumptions probably hold for these files in particular (3 elicitation sessions in the same recording enviroment on the same day, i.e. 2018-05-18).
 
 <pre>
+import auditok
 import glob
-import os 
+import os
+import pympi
 
 for wav_file in glob.glob("data/*.wav"):
 
