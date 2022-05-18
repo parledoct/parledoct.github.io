@@ -143,6 +143,8 @@ true_labels[1500:2000]
 We can now try out different energy thresholds and find out what the frame error rate is by comparing the splits returned by auditok to the ones that I've manually created:
 
 <pre>
+import auditok
+
 for threshold in range(45, 55):
 
     # Create a list of 0s
