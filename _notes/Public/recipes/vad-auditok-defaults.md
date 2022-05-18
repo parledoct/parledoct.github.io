@@ -17,7 +17,7 @@ We'll then use the [pympi](https://dopefishh.github.io/pympi/index.html) Python 
 
 ### Environment
 
-Assuming you've set up [Docker](environment-setup-with-docker) and the [Parledoct tutorials environment](http://localhost:4000/notes/parledoct-tutorials-environment), we can run a Docker container with `auditok` and `pympi` installed by running the command below. Once the container is set up, copy the relevant URL and open it up in your browser, then open a new Python 3 Console.
+Assuming you've set up [Docker](environment-setup-with-docker) and the [Parledoct tutorials environment](parledoct-tutorials-environment), we can run a Docker container with `auditok` and `pympi` installed by running the command below. Once the container is set up, copy the relevant URL and open it up in your browser, then open a new Python 3 Console.
 
 <pre>
 docker-compose run --rm --service-ports vad
@@ -128,3 +128,5 @@ for wav_file in glob.glob("data/*.wav"):
     eaf_name = wav_file.rsplit('.')[0] + '.eaf'
     annot_data.to_file(eaf_name)
 </pre>
+
+Congrats — you've completed your first speech processing task!
