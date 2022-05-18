@@ -33,13 +33,13 @@ First let's download the data from Zenodo into the `tmp` folder using `wget`:
 !wget 'https://zenodo.org/record/6519000/files/ihanzu-harvey-0596_20180518opq.zip?download=1' -O tmp/data.zip
 </pre>
 
-> Note: The exclamation mark `!` before the commands `wget` and also `unzip` below indicates to the console to interpret what follows as a shell command and not a Python one
-
 Let's unzip the downloaded file into the `data` folder:
 
 <pre>
 !unzip tmp/data.zip -d data/
 </pre>
+
+> Note: The exclamation mark `!` before the commands `wget` and `unzip` indicates to the JupyterLab console to interpret what follows as a shell command and not a Python one (see [JupyterLab basics](#to-do)).
 
 ### Recipe
 
@@ -99,7 +99,7 @@ If you browse in your Finder (macOS) or File Explorer (Windows) to the `data` fo
 
 #### Detect and export for all files in folder
 
-Now we can combine this recipe with what we learned from the [audio duration calculation tutorial](#to-do) to perform voice activity detection and exporting the detected regions to an ELAN .eaf file for all wav files in a given directory:
+The following script uses the `glob` package to find all files ending with `wav` in the `data` folder then, for each file, performs voice activity detection and exports the detected regions to an ELAN .eaf file co-located with the original wav file:
 
 <pre>
 import auditok
