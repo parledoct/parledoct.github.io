@@ -18,14 +18,39 @@ To make sure that you can quickly get set up with the tools you need for a given
     <img src="https://user-images.githubusercontent.com/9938298/168325619-b93a74d2-a41b-4a01-a193-d5c7fd771bf4.png" width="300px">
 </p>
 
+## Background: virtualisation 
+
+First, some very brief background on the Docker container set up in order to make sense of some of the installation steps you may have to perform (depending on your operating system, hardware, etc.).
+
+Docker helps ensure a standardised computation environment by running a 'virtual' guest operating system (e.g. Ubuntu Linux) on top of a host, i.e. your computer's operating system (whatever that may be: Windows, macOS, Linux) and hardware (e.g. CPU: Intel, AMD, etc.).
+
+As the combination of the latter two can be variable, there may be additional steps to take to get Docker set up for your specific configuration. I've curated a list of 'Notes' for each operating system by those who have tried this tutorial, so please let me know if you run into any trouble! 
+
+<p style="text-align:center">
+    <img src="https://user-images.githubusercontent.com/9938298/169365953-66b37ef6-4ac9-42fd-8e62-a458f5d5cfd4.png" width="500px">
+</p>
+
 ## Docker installation
 
-- Mac/Windows:
-    - Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- Linux:
-    - Follow steps on: https://docs.docker.com/desktop/linux/install/#generic-installation-steps
+### Mac
 
-### Verification
+Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+**Notes**
+- You may be prompted to allow Docker Desktop to have priveleged access.  
+
+### Windows
+
+Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+**Notes**
+- You may be asked to enable 'hardware assisted virtualisation' in the computer BIOS if it has been disabled by default by your computer manufacturer. If so, you can search Google for 'enable hardware acceleration {your computer manufacturer}', e.g. 'enable hardware acceleration lenovo'. This should lead you to a step-by-step instruction for your specific computer, possibly from the manufacturer itself, e.g. [https://support.lenovo.com/us/en/solutions/ht500006-how-to-enable-virtualization-technology-on-lenovo-computers](https://support.lenovo.com/us/en/solutions/ht500006-how-to-enable-virtualization-technology-on-lenovo-computers)
+
+### Linux
+
+Follow steps on: [https://docs.docker.com/desktop/linux/install/#generic-installation-steps](https://docs.docker.com/desktop/linux/install/#generic-installation-steps)
+
+## Verification
 
 Once you have Docker installed and running, open a [command-line interface](https://tutorial.djangogirls.org/en/intro_to_command_line/) (e.g. macOS Terminal or Windows Command Prompt), and type in the command `docker run hello-world`:
 
