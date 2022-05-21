@@ -56,4 +56,4 @@ Once you have Docker installed and running, open a [command-line interface](http
 
 <script id="asciicast-vY9XqvToi13S6iWjKBIOrDvix" src="https://asciinema.org/a/vY9XqvToi13S6iWjKBIOrDvix.js" async></script>
 
-If you get the expected output above then you're ready to start using Docker! Let's set up the environment we'll use for all the [Parledoct tutorials now](parledoct-tutorials-environment).
+If you get the expected output above then you're ready to start using Docker! Let's now get familar with the general process for setting up [Parledoct tutorial enviroments](parledoct-tutorials-environment).
