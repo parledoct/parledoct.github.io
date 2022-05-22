@@ -16,7 +16,7 @@ Assuming you have [Docker](environment-setup-with-docker) set up and running, an
 
 - [https://github.com/parledoct/tutorials/archive/refs/heads/pydub.zip](https://github.com/parledoct/tutorials/archive/refs/heads/pydub.zip)
 
-Once unzipped, right-click the `tutorials-pydub` folder and [launch a command-line interface](parledoct-tutorials-environment#launch-command-line-interface-at-folder), then [launch the environment](parledoct-tutorials-environment#launch-environment) with `docker-compse up`. Once the environment has been set up and you see the JupyterLab URL, open the URL in your browser and [create a new Python 3 console](jupyterlab-basics#your-first-python-command).
+Once unzipped, right-click the `tutorials-pydub` folder and [launch a command-line interface](parledoct-tutorials-environment#launch-command-line-interface-at-folder), then [launch the environment](parledoct-tutorials-environment#launch-environment) with `docker-compose up`. Once the environment has been set up and you see the JupyterLab URL, open the URL in your browser and [create a new Python 3 console](jupyterlab-basics#your-first-python-command).
 
 ### Data
 
