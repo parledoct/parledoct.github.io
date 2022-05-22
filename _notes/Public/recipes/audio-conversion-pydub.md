@@ -34,7 +34,7 @@ Let's unzip the downloaded file into the `data` folder:
 !unzip tmp/data_mp3.zip -d data/
 </pre>
 
-> Note: The exclamation mark `!` before the commands `wget` and `unzip` indicates to the JupyterLab console to interpret what follows as a shell command and not a Python one (see [JupyterLab basics](#jupyterlab-basics)).
+> Note: The exclamation mark `!` before the commands `wget` and `unzip` indicates to the JupyterLab console to interpret what follows as a shell command and not a Python one (see [JupyterLab basics](jupyterlab-basics)).
 
 ### Recipe
 
