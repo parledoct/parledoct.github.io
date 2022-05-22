@@ -45,6 +45,22 @@ In the input area at the bottom, you can type in a Python command such as `print
 
 As we noted above, we can use the same JupyterLab Python 3 Console to execute shell commands. All we have to do to denote that commands we enter into the console should be interpreted as shell commands is to prefix them with an exclamation mark. Thus you can type in a command such as `!echo "Hello!"` and press `Shift + Enter`. In later tutorials, we will mainly be using shell commands for file management, e.g. download files with `wget`.
 
+## Wait for the [*]
+
+Some commands may take some time to complete. You can tell whether a set of commands has finished based on whether there is a `*` or number inside the brackets that appear on the left side of the executed commands:
+
+<p style="text-align:center">
+    <img alt="wait-star" src="https://user-images.githubusercontent.com/9938298/169709306-248f3a73-4764-4556-8c4b-75b2e10ea658.png">
+</p>
+
+### Progress bars with `tqdm`
+
+Fortunately, for some long-running processes we'll use in later tutorials there's a way to report the progress of the computations. You'll see the `tqdm` library imported and typically used as a 'wrapper' around for loops:
+
+<p style="text-align:center">
+    <img alt="tqdm-wait-star" src="https://user-images.githubusercontent.com/9938298/169709465-30f9ef1f-0091-44af-b8d5-1ab2ffe1ff95.png">
+</p>
+
 ## Wrap up
 
 This concludes the JupyterLab basics tutorial! I'll grow the contents of this page as I uncover aspects of the JupyterLab interface that new users find confusing when going through the Parledoct material. 
