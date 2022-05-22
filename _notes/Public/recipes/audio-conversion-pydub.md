@@ -116,7 +116,7 @@ While it is more concise, it assumes some familiarity with how the `find`, `para
 - `ffmpeg` takes an input file specified by `-i`, the output sample rate is specified by `-ar`, the number of channels by `-ac`, and `-y` specifies that existing files should be overwritten. Without parallel, you would typically write for example
 
     <pre>
-    ffmpeg -i data/20180518o.mp3 -ar 16000 -ac 1 data/20180518o_16khz-mono.wav
+    ffmpeg -y -i data/20180518o.mp3 -ar 16000 -ac 1 data/20180518o_16khz-mono.wav
     </pre>
 
     - The `{}` and `{.}` are represent replacement strings, which is a functionality provided by `parallel` (see [documentation](https://www.gnu.org/software/parallel/parallel_tutorial.html#replacement-strings)).
