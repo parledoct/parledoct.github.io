@@ -30,7 +30,7 @@ Right click on the `tutorials-intro` folder and launch a command-line interface:
 
 - **Windows**: Right click on the `tutorials-intro` folder > Open command window here
 - **Linux**: Right click on the `tutorials-intro` folder > Open in Terminal
-- **macOS**: Right click on the `tutorials-intro` folder > Services > New Terminal at Folder
+- **macOS**: Right click on the `tutorials-intro` folder > (Services >) New Terminal at Folder
     - **Note**: You may first need to set up the 'New Terminal at Folder' service via  > System Preferences > Keyboard > Shortcuts > Services
 
 ### Launch environment

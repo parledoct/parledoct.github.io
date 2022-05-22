@@ -1,20 +1,22 @@
 ---
-title : Audio conversion with pydub
+title : Audio conversion with pydub and ffmpeg
 notetype : feed
 date : 18-05-2022
 ---
 
-As we learned in the [audio data basics](#to-do) tutorial, many speech processing tools will require your data to be 16 kHz mono wav files. In this recipe we're going to learn how to use the [pydub](https://github.com/jiaaro/pydub) Python package to convert audio files into this format.
+As we learned in the [audio data basics](#to-do) tutorial, many speech processing tools will require your data to be 16 kHz mono wav files. In this recipe we're going to learn how to convert audio files into this format using the [pydub](https://github.com/jiaaro/pydub) Python package, which provides a Python interface to the very popular ffmpeg library for audio/video processing.
+
+For more intermediate/advanced readers who want to directly use ffmpeg, I also provide a handy snippet at the [end of this tutorial](#shell-advanced).
 
 ## Setup
 
 ### Environment
 
-Assuming you've set up [Docker](environment-setup-with-docker) and the [Parledoct tutorials environment](parledoct-tutorials-environment), we can run a Docker container with `pydub` installed by running the command below. Once the container is set up, copy the relevant URL and open it up in your browser, then open a new Python 3 Console.
+Assuming you have [Docker](environment-setup-with-docker) set up and running, and that you've familiarised yourself with the process for setting up[Parledoct tutorials environments](parledoct-tutorials-environment), download the `tutorials-pydub` zip file:
 
-<pre>
-docker-compose run --rm --service-ports pydub
-</pre>
+- [https://github.com/parledoct/tutorials/archive/refs/heads/pydub.zip](https://github.com/parledoct/tutorials/archive/refs/heads/pydub.zip)
+
+Once unzipped, right-click the `tutorials-pydub` folder and [launch a command-line interface](parledoct-tutorials-environment#launch-command-line-interface-at-folder), then [launch the environment](parledoct-tutorials-environment#launch-environment) with `docker-compse up`. Once the environment has been set up and you see the JupyterLab URL, open the URL in your browser and [create a new Python 3 console](jupyterlab-basics#your-first-python-command).
 
 ### Data
 
@@ -69,7 +71,11 @@ audio_data = audio_data.set_channels(1)
 audio_data.export("data/20180518o_16khz-mono.wav", format="wav")
 </pre>
 
+If you navigate to the `tutorials-pydub/data` folder on your computer (e.g. in Finder or File Explorer), you will see the exported `20180518o_16khz-mono.wav` file there.
+
 #### Convert all files in a folder
+
+##### Python
 
 The following script uses the `glob` package to find all files ending with `mp3` in the `data` folder then applies the recipe above to each of those files. For this tutorial, I've intentionally named the exported files with a `_16khz-mono` suffix, as not to unintentionally over-write any .wav files that may be present (so those who do want this behaviour can modify the script as you need).
 
@@ -94,3 +100,25 @@ for input_file in glob.glob("data/*.mp3"):
     # Export audio to file
     audio_data.export(output_file, format="wav")
 </pre>
+
+##### Shell (advanced)
+
+The following 1-line shell script performs the same task as the Python script above (remember to prefix `!` if you're using the Python 3 Console to execute a shell command).
+
+<pre>
+find data -name "*.mp3" | parallel ffmpeg -y -i {} -ar 16000 -ac 1 {.}_16khz-mono.wav
+</pre>
+
+While it is more concise, it assumes some familiarity with how the `find`, `parallel` and `ffmpeg` shell commands work. Let's break it down.
+
+- `find data -name "*.mp3"` Creates a list of all mp3 files in the data folder which is then passed to `parallel` via the pipe `|`
+- `parallel` will execute the command that follows (e.g. `ffmpeg`) in parallel, which means for example if you have a multi-core CPU it can process multiple files simultaneously (you can limit how many simultaneous jobs happen with `-j`, e.g. `parallel -j 2`)
+- `ffmpeg` takes an input file specified by `-i`, the output sample rate is specified by `-ar`, the number of channels by `-ac`, and `-y` specifies that existing files should be overwritten. Without parallel, you would typically write for example
+
+    <pre>
+    ffmpeg -i data/20180518o.mp3 -ar 16000 -ac 1 data/20180518o_16khz-mono.wav
+    </pre>
+
+    - The `{}` and `{.}` are represent replacement strings, which is a functionality provided by `parallel` (see [documentation](https://www.gnu.org/software/parallel/parallel_tutorial.html#replacement-strings)).
+        - `{}`: the original input path, e.g. `data/20180518o.mp3`
+        - `{.}`: the path without the extension, e.g. `data/20180518o`
