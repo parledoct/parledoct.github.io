@@ -71,7 +71,7 @@ audio_data = audio_data.set_channels(1)
 audio_data.export("data/20180518o_16khz-mono.wav", format="wav")
 </pre>
 
-If you navigate to the `tutorials-pydub/data` folder on your computer (e.g. in Finder or File Explorer), you will see the exported `20180518o_16khz-mono.wav` file there.
+If you navigate to the `tutorials-audio-conversion/data` folder on your computer (e.g. in Finder or File Explorer), you will see the exported `20180518o_16khz-mono.wav` file there.
 
 #### Convert all files in a folder
 
