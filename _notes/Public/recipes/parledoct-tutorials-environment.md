@@ -52,22 +52,22 @@ tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.211 ServerApp] jupyter
 tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] nbclassic | extension was successfully loaded.
 tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] Serving notebooks from local directory: /parledoct-tutorials
 tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] Jupyter Server 1.17.0 is running at:
-tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] http://localhost:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
-tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp]  or http://127.0.0.1:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] http://localhost:29796/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp]  or http://127.0.0.1:29796/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
 tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 tutorials-introduction-tutorial  | [C 2022-05-21 20:33:02.219 ServerApp] 
 tutorials-introduction-tutorial  |     
 tutorials-introduction-tutorial  |     To access the server, open this file in a browser:
 tutorials-introduction-tutorial  |         file:///root/.local/share/jupyter/runtime/jpserver-1-open.html
 tutorials-introduction-tutorial  |     Or copy and paste one of these URLs:
-tutorials-introduction-tutorial  |         http://localhost:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
-tutorials-introduction-tutorial  |      or http://127.0.0.1:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
+tutorials-introduction-tutorial  |         http://localhost:29796/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
+tutorials-introduction-tutorial  |      or http://127.0.0.1:29796/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
 </pre>
 
 If you copy and paste one of the last URLs **including the `token=...`** into your browser, e.g.:
 
 ```
-http://127.0.0.1:8888/?token=86acc1e58d49d087468c9ae0c441464f70f5aa9db67121e4
+http://127.0.0.1:29796/?token=86acc1e58d49d087468c9ae0c441464f70f5aa9db67121e4
 ```
 
 You will see the `JupyterLab` interface that looks like:
@@ -80,11 +80,11 @@ If you're able to see this interface, congrats — you've set up your first stan
 
 ### Shut down environment
 
-Once you're done with a given tutorial, it is important to shut down the container. To do this, all you need to down is to go back to the command-line interface (e.g. your macOS Terminal/Windows Command Prompt where you copied the `http://127.0.0.1:8888?token=...` address) and press `Ctrl + C` (all platforms: even on macOS, i.e. not  + C).
+Once you're done with a given tutorial, it is important to shut down the container. To do this, all you need to down is to go back to the command-line interface (e.g. your macOS Terminal/Windows Command Prompt where you copied the `http://127.0.0.1:29796?token=...` address) and press `Ctrl + C` (all platforms: even on macOS, i.e. not  + C).
 
 #### Shut down containers from Docker Dashboard
 
-If you accidentally left a previous container running, it may prevent a new one from starting up (one message you may see is `Bind for 0.0.0.0:8888 failed: port is already allocated`).
+If you accidentally left a previous container running, it may prevent a new one from starting up (one message you may see is `Bind for 0.0.0.0:29796 failed: port is already allocated`).
 
 To see and manage containers that are running on your computer, you can go to the Docker Dashboard:
 
