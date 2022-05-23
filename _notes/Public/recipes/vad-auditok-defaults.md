@@ -6,7 +6,7 @@ date : 14-05-2022
 
 In this recipe we're going to learn how to find all the time regions in a recording when someone is speaking (more technically: [voice activity detection](https://en.wikipedia.org/wiki/Voice_activity_detection)) and export these time regions to the `default` tier in a new ELAN `.eaf` file.
 
-For the detection part, we'll use the [auditok](https://github.com/amsehili/auditok) Python package, which provides an easy way to detect regions in a sound file that are above a certain threshold of acoutsic energy (defaults to `50 dB`). 
+For the detection part, we'll use the [auditok](https://github.com/amsehili/auditok) Python package, which provides an easy way to detect regions in a sound file that are above a certain threshold of acoustic energy (defaults to `50 dB`). 
 We'll then use the [pympi](https://dopefishh.github.io/pympi/index.html) Python package to export the time regions to an ELAN file.
 
 <p style="text-align:center">
@@ -17,11 +17,11 @@ We'll then use the [pympi](https://dopefishh.github.io/pympi/index.html) Python 
 
 ### Environment
 
-Assuming you've set up [Docker](environment-setup-with-docker) and the [Parledoct tutorials environment](parledoct-tutorials-environment), we can run a Docker container with `auditok` and `pympi` installed by running the command below. Once the container is set up, copy the relevant URL and open it up in your browser, then open a new Python 3 Console.
+Assuming you have [Docker](environment-setup-with-docker) set up and running, and that you've familiarised yourself with the process for setting up [Parledoct tutorials environments](parledoct-tutorials-environment), download the `tutorials-voice-activity-detection` zip file:
 
-<pre>
-docker-compose run --rm --service-ports vad
-</pre>
+- [https://github.com/parledoct/tutorials/archive/refs/heads/voice-activity-detection.zip](https://github.com/parledoct/tutorials/archive/refs/heads/voice-activity-detection.zip)
+
+Once unzipped, right-click (Windows: Shift + right-click) the `tutorials-voice-activity-detection` folder and [launch a command-line interface](parledoct-tutorials-environment#launch-command-line-interface-at-folder), then [launch the environment](parledoct-tutorials-environment#launch-environment) with `docker-compose up`. Once the environment has been set up and you see the JupyterLab URL, open the URL in your browser and [create a new Python 3 console](jupyterlab-basics#your-first-python-command).
 
 ### Data
 

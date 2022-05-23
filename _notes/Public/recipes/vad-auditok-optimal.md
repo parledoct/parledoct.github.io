@@ -22,11 +22,7 @@ This measure is called the Frame Error Rate (FER) and what we want to do is find
 
 ### Environment
 
-Assuming you've set up [Docker](environment-setup-with-docker) and the [Parledoct tutorials environment](parledoct-tutorials-environment), we can run a Docker container with `auditok` and `pympi` installed by running the command below. Once the container is set up, copy the relevant URL and open it up in your browser, then open a new Python 3 Console.
-
-<pre>
-docker-compose run --rm --service-ports vad
-</pre>
+Assuming you have [Docker](environment-setup-with-docker) set up and running and have complered the setup steps in [the first tutorial](vad-auditok-defaults#setup), right-click (Windows: Shift + right-click) the `tutorials-voice-activity-detection` folder and [launch a command-line interface](parledoct-tutorials-environment#launch-command-line-interface-at-folder), then [launch the environment](parledoct-tutorials-environment#launch-environment) with `docker-compose up`. Once the environment has been set up and you see the JupyterLab URL, open the URL in your browser and [create a new Python 3 console](jupyterlab-basics#your-first-python-command).
 
 ### Data
 

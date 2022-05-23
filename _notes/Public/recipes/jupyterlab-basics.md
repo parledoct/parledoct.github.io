@@ -8,20 +8,20 @@ Now that you have [set up Docker](environment-setup-with-docker) and [launched a
 
 ## Data sharing
 
-One of the first things you might notice is the file browser pane on the left side of the interface and that there may be some files (e.g. `docker-compose.yml`) and folders (e.g. `data`, `tmp`) you might have seen before. These files and folders are the same as those you might have seen in the `tutorials-intro` folder if you happen to have opened it in your Finder (macOS) or File Explorer (Windows).
+One of the first things you might notice is the file browser pane on the left side of the interface and that there may be some files (e.g. `docker-compose.yml`) and folders (e.g. `data`, `tmp`) you might have seen before. These files and folders are the same as those you might have seen in the `tutorials-introduction` folder if you happen to have opened it in your Finder (macOS) or File Explorer (Windows).
 
 <p style="text-align:center">
     <img alt="data-sharing" src="https://user-images.githubusercontent.com/9938298/169670857-338e7d0d-8391-445d-90e1-6448a84ee26f.png">
 </p>
 
-You can verify this by clicking on the 'New Folder' icon to create a new folder (I've left it unnamed as 'Untitled Folder'), and this folder will also appear on your computer inside the `tutorials-intro` folder which you can browse to using Finder or File Explorer.
+You can verify this by clicking on the 'New Folder' icon to create a new folder (I've left it unnamed as 'Untitled Folder'), and this folder will also appear on your computer inside the `tutorials-introduction` folder which you can browse to using Finder or File Explorer.
 
 Thus, both you/your computer and the computation environment with the data processing tools can read/write/modify the contents of these files and folders. So when we create ELAN eaf files in `data` in later tutorials, you can browse to the folder on your computer to open in ELAN the files you created using the tools inside the computation environment.
 
 ## Python and shell commands
 
 As mentioned in the [Docker setup tutorial](environment-setup-with-docker), Docker helps to set up on top of your own operating system (macOS, Windows, Linux) and hardware (Intel, AMD, etc.) a standardised virtual operating system that contains various tools we want to use, e.g. Python.
-JupyterLab provides a conveinent way to execute both Python commands and '[shell](https://datacarpentry.org/shell-genomics/01-introduction/)' commands which are passed along to the virtual operating system.
+JupyterLab provides a conveinent way to execute both Python commands and '[shell](https://datacarpentry.org/shell-genomics/01-introductionduction/)' commands which are passed along to the virtual operating system.
 
 <p style="text-align:center">
     <img alt="shell-python" src="https://user-images.githubusercontent.com/9938298/169671681-5e3106ad-bd48-4580-99b5-22e6c545529d.png">

@@ -12,11 +12,11 @@ For more intermediate/advanced readers who want to directly use ffmpeg, I also p
 
 ### Environment
 
-Assuming you have [Docker](environment-setup-with-docker) set up and running, and that you've familiarised yourself with the process for setting up[Parledoct tutorials environments](parledoct-tutorials-environment), download the `tutorials-pydub` zip file:
+Assuming you have [Docker](environment-setup-with-docker) set up and running, and that you've familiarised yourself with the process for setting up [Parledoct tutorials environments](parledoct-tutorials-environment), download the `tutorials-audio-conversion` zip file:
 
-- [https://github.com/parledoct/tutorials/archive/refs/heads/pydub.zip](https://github.com/parledoct/tutorials/archive/refs/heads/pydub.zip)
+- [https://github.com/parledoct/tutorials/archive/refs/heads/audio-conversion.zip](https://github.com/parledoct/tutorials/archive/refs/heads/audio-conversion.zip)
 
-Once unzipped, right-click the `tutorials-pydub` folder and [launch a command-line interface](parledoct-tutorials-environment#launch-command-line-interface-at-folder), then [launch the environment](parledoct-tutorials-environment#launch-environment) with `docker-compose up`. Once the environment has been set up and you see the JupyterLab URL, open the URL in your browser and [create a new Python 3 console](jupyterlab-basics#your-first-python-command).
+Once unzipped, right-click (Windows: Shift + right-click) the `tutorials-audio-conversion` folder and [launch a command-line interface](parledoct-tutorials-environment#launch-command-line-interface-at-folder), then [launch the environment](parledoct-tutorials-environment#launch-environment) with `docker-compose up`. Once the environment has been set up and you see the JupyterLab URL, open the URL in your browser and [create a new Python 3 console](jupyterlab-basics#your-first-python-command).
 
 ### Data
 

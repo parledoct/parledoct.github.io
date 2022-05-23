@@ -6,31 +6,31 @@ date : 14-05-2022
 
 As mentioned in the [Docker setup tutorial](environment-setup-with-docker), Docker lets us standardise computation environments across different operating systems and hardware.
 
-That said, instead of having a single Docker container with the tools for all the Parledoct tutorials, there will be several separate ones (e.g. `tutorials-intro`, `tutorials-vad`, etc.) to keep each one relatively small, as some of the 'heavyweight' tools that we only require for more advanced tutorials are several gigabyes in size (e.g. the [HuggingFace Transformers](https://huggingface.co/docs/transformers/index) library for automatic speech recognition).
+That said, instead of having a single Docker container with the tools for all the Parledoct tutorials, there will be several separate ones (e.g. `tutorials-introduction`, `tutorials-voice-activity-detection`, etc.) to keep each one relatively small, as some of the 'heavyweight' tools that we only require for more advanced tutorials are several gigabytes in size (e.g. the [HuggingFace Transformers](https://huggingface.co/docs/transformers/index) library for automatic speech recognition).
 
 The process of setting up each of these environments will be the same and we'll learn this process.
 
 ## Setup
 
-**Note**: if you've landed here from a linked page, substitute references `tutorials-intro` with the one that's relevant for you, e.g. `tutorials-vad`.
+**Note**: if you've landed here from a linked page, substitute references `tutorials-introduction` with the one that's relevant for you, e.g. `tutorials-voice-activity-detection`.
 
 ### Download tutorial zip file
 
-At the start of each tutorial sequence (e.g. Part 1 of 3), I will provide a link to a zip file download for the computation environment needed for all tutorials in that sequence. For this tutorial, let's download the `tutorials-intro` zip file:
+At the start of each tutorial sequence (e.g. Part 1 of 3), I will provide a link to a zip file download for the computation environment needed for all tutorials in that sequence. For this tutorial, let's download the `tutorials-introduction` zip file:
 
-- [https://github.com/parledoct/tutorials/archive/refs/heads/intro.zip](https://github.com/parledoct/tutorials/archive/refs/heads/intro.zip)
+- [https://github.com/parledoct/tutorials/archive/refs/heads/introduction.zip](https://github.com/parledoct/tutorials/archive/refs/heads/introduction.zip)
 
 ### Unzip and browse to parent folder
 
-Unzip the `tutorials-intro.zip` and in your file browser (e.g. Finder for macOS, File Explorer for Windows), navigate to the folder that contains the unzipped `tutorials-intro` folder, **but do not go inside it**.
+Unzip the `tutorials-introduction.zip` and in your file browser (e.g. Finder for macOS, File Explorer for Windows), navigate to the folder that contains the unzipped `tutorials-introduction` folder, **but do not go inside it**.
 
 ### Launch command-line interface at folder
 
-Right click on the `tutorials-intro` folder and launch a command-line interface:
+Right click on the `tutorials-introduction` folder and launch a command-line interface:
 
-- **Windows**: Right click on the `tutorials-intro` folder > Open command window here
-- **Linux**: Right click on the `tutorials-intro` folder > Open in Terminal
-- **macOS**: Right click on the `tutorials-intro` folder > (Services >) New Terminal at Folder
+- **Windows**: Shift + Right click on the `tutorials-introduction` folder > Open command window here
+- **Linux**: Right click on the `tutorials-introduction` folder > Open in Terminal
+- **macOS**: Right click on the `tutorials-introduction` folder > (Services >) New Terminal at Folder
     - **Note**: You may first need to set up the 'New Terminal at Folder' service via  > System Preferences > Keyboard > Shortcuts > Services
 
 ### Launch environment
@@ -40,28 +40,28 @@ In the command-line interface, type in: `docker-compose up` and press enter.
 **Note**. The very first time you run this command Docker will need to download (and sometimes setup) the computation environment and this may take some time. Once the environment is set up, you will see a message that looks like:
 
 <pre>
-Attaching to tutorials-intro-tutorial
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:01.505 ServerApp] jupyterlab | extension was successfully linked.
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:01.518 ServerApp] nbclassic | extension was successfully linked.
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.159 ServerApp] notebook_shim | extension was successfully linked.
-tutorials-intro-tutorial  | [W 2022-05-21 20:33:02.206 ServerApp] WARNING: The Jupyter server is listening on all IP addresses and not using encryption. This is not recommended.
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.207 ServerApp] notebook_shim | extension was successfully loaded.
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.208 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.8/site-packages/jupyterlab
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.208 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.211 ServerApp] jupyterlab | extension was successfully loaded.
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] nbclassic | extension was successfully loaded.
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] Serving notebooks from local directory: /parledoct-tutorials
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] Jupyter Server 1.17.0 is running at:
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] http://localhost:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp]  or http://127.0.0.1:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
-tutorials-intro-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-tutorials-intro-tutorial  | [C 2022-05-21 20:33:02.219 ServerApp] 
-tutorials-intro-tutorial  |     
-tutorials-intro-tutorial  |     To access the server, open this file in a browser:
-tutorials-intro-tutorial  |         file:///root/.local/share/jupyter/runtime/jpserver-1-open.html
-tutorials-intro-tutorial  |     Or copy and paste one of these URLs:
-tutorials-intro-tutorial  |         http://localhost:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
-tutorials-intro-tutorial  |      or http://127.0.0.1:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
+Attaching to tutorials-introduction-tutorial
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:01.505 ServerApp] jupyterlab | extension was successfully linked.
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:01.518 ServerApp] nbclassic | extension was successfully linked.
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.159 ServerApp] notebook_shim | extension was successfully linked.
+tutorials-introduction-tutorial  | [W 2022-05-21 20:33:02.206 ServerApp] WARNING: The Jupyter server is listening on all IP addresses and not using encryption. This is not recommended.
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.207 ServerApp] notebook_shim | extension was successfully loaded.
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.208 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.8/site-packages/jupyterlab
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.208 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.211 ServerApp] jupyterlab | extension was successfully loaded.
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] nbclassic | extension was successfully loaded.
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] Serving notebooks from local directory: /parledoct-tutorials
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] Jupyter Server 1.17.0 is running at:
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] http://localhost:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp]  or http://127.0.0.1:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
+tutorials-introduction-tutorial  | [I 2022-05-21 20:33:02.216 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+tutorials-introduction-tutorial  | [C 2022-05-21 20:33:02.219 ServerApp] 
+tutorials-introduction-tutorial  |     
+tutorials-introduction-tutorial  |     To access the server, open this file in a browser:
+tutorials-introduction-tutorial  |         file:///root/.local/share/jupyter/runtime/jpserver-1-open.html
+tutorials-introduction-tutorial  |     Or copy and paste one of these URLs:
+tutorials-introduction-tutorial  |         http://localhost:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
+tutorials-introduction-tutorial  |      or http://127.0.0.1:8888/lab?token=6fd6419aa2fd08e1a97d4a3727c308da9bf16fe7f6f2caa8
 </pre>
 
 If you copy and paste one of the last URLs **including the `token=...`** into your browser, e.g.:
